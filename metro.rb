@@ -31,11 +31,11 @@ station_off = gets.chomp
 if on == off
 
 trip_calculator = ((lines[on].index(station_on).to_i) - (lines[off].index(station_off).to_i)).abs
-puts trip_calculator.to_s + ' stops'
+puts trip_calculator.to_s + ' stops to destination'
 
 elsif on != off
  	double_calculator = (((lines[on].index(station_on).to_i) - (lines[on].index("us"))) + ((lines[off].index("us")) - (lines[off].index(station_off).to_i))).abs
- 	puts double_calculator
+ 	puts double_calculator + ' stops to destination'
  	else 
  		puts error
  	end
